@@ -1,5 +1,5 @@
 import torch
-from diffusers import StableDiffusionPipeline
+from diffusers import StableDiffusionPipeline, DDIMScheduler, EulerDiscreteScheduler
 from config import *
 
 def load_pipeline(model_id, device):
@@ -14,6 +14,20 @@ def load_pipeline(model_id, device):
     # # debug
     # print("Tokenizer 1:", pipe.tokenizer)
     # print("Tokenizer 2:", pipe.tokenizer_2)
+
+    return pipe
+
+def set_scheduler(pipe, scheduler_name):
+    config = pipe.scheduler.config
+
+    if scheduler_name == "ddim":
+        pipe.scheduler = DDIMScheduler.from_config(config)
+
+    elif scheduler_name == "euler":
+        pipe.scheduler = EulerDiscreteScheduler.from_config(config)
+
+    else:
+        raise ValueError(f"Unknown scheduler: {scheduler_name}")
 
     return pipe
 

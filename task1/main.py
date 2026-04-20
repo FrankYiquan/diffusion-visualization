@@ -1,7 +1,7 @@
 import torch
 
 from config import *
-from .prompts import load_random_prompts
+from .prompts import load_random_prompts_1
 from .generate import load_pipeline, generate_with_trajectory
 from utils.image_utils import save_image, save_trajectory
 from .visualize import plot_trajectory
@@ -11,7 +11,7 @@ def main():
     print("Using GPU:", torch.cuda.is_available())
 
     pipe = load_pipeline(MODEL_ID, DEVICE)
-    prompts = load_random_prompts(NUM_PROMPTS, SEED)
+    prompts = load_random_prompts_1(NUM_PROMPTS, SEED)
 
     for i, prompt in enumerate(prompts):
         print(f"\nPrompt {i+1}: {prompt}")
@@ -23,7 +23,7 @@ def main():
                 pipe, prompt, scale
             )
 
-            base_name = f"{OUTPUT_DIR}/prompt_{i}_scale_{scale}"
+            base_name = f"{OUTPUT_DIR_1}/prompt_{i}_scale_{scale}"
 
             # Save final image
             save_image(final_img, f"{base_name}_final.png")
