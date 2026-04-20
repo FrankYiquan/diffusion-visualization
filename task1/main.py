@@ -1,7 +1,7 @@
 import torch
 
 from config import *
-from .prompts import load_random_prompts_1
+from .prompts import load_random_prompts
 from .generate import load_pipeline, generate_with_trajectory
 from utils.image_utils import save_image, save_trajectory
 from .visualize import plot_trajectory
@@ -11,7 +11,7 @@ def main():
     print("Using GPU:", torch.cuda.is_available())
 
     pipe = load_pipeline(MODEL_ID, DEVICE)
-    prompts = load_random_prompts_1(NUM_PROMPTS, SEED)
+    prompts = load_random_prompts(NUM_PROMPTS, SEED)
 
     for i, prompt in enumerate(prompts):
         print(f"\nPrompt {i+1}: {prompt}")
