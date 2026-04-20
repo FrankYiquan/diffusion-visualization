@@ -1,0 +1,113 @@
+# =========================
+
+# Python
+
+# =========================
+
+**pycache**/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+
+venv/
+env/
+.venv/
+ENV/
+
+# =========================
+
+# Jupyter / notebooks
+
+# =========================
+
+.ipynb_checkpoints/
+
+# =========================
+
+# OS files
+
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+
+# Logs & temp files
+
+# =========================
+
+*.log
+*.tmp
+*.swp
+
+# =========================
+
+# Environment variables
+
+# =========================
+
+.env
+
+# =========================
+
+# Model / cache (Hugging Face)
+
+# =========================
+
+.cache/
+.huggingface/
+hf_home/
+
+# =========================
+
+# PyTorch / CUDA cache
+
+# =========================
+
+*.pt
+*.pth
+
+# =========================
+
+# Outputs (IMPORTANT)
+
+# =========================
+
+outputs/
+*.png
+*.jpg
+*.jpeg
+
+# (optional) keep sample results
+
+!outputs/sample/
+
+# =========================
+
+# IDE
+
+# =========================
+
+.vscode/
+.idea/
+
+# =========================
+
+# Mac / Linux trash
+
+# =========================
+
+.Trashes
+*.Trash-*
+
+# =========================
+
+# Misc
+
+# =========================
+
+*.zip
+*.tar
+*.gz

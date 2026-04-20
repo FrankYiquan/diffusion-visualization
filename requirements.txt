@@ -1,0 +1,10 @@
+torch
+diffusers
+transformers
+accelerate
+safetensors
+Pillow
+matplotlib
+numpy
+datasets
+tqdm
