@@ -9,16 +9,16 @@ This project uses **Stable Diffusion XL (SDXL)** via Hugging Face Diffusers to v
 
 ## Setup & Run
 
+To install dependencies
 ```bash
-python3 -m venv venv
-source venv/bin/activate  
-
 pip install -r requirements.txt
-
-# Task 1
+```
+To run task 1
+```bash
 python -m task1.main
-
-# Task 2
+```
+To run task 2
+```bash
 python -m task2.main
 ```
 
